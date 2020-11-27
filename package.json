@@ -2,7 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "commit": "lint-staged && export HUSKY_SKIP_HOOKS=1 && git-cz"
+    "commit": "lint-staged && export HUSKY_SKIP_HOOKS=1 && git-cz",
+    "publish": "lerna version --conventional-commits --create-release github"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
