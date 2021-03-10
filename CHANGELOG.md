@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/one-style/one-style/compare/v0.1.1...v0.2.0) (2021-03-10)
+
+
+### Features
+
+* **@one-commit:** 添加conventional-changelog-cli 依赖 ([0b78165](https://github.com/one-style/one-style/commit/0b781657e450603860d862ad188922cd448487a9))
+
+
+
+
+
 ## [0.1.1](https://github.com/one-style/one-style/compare/v0.1.0...v0.1.1) (2020-11-27)
 
 **Note:** Version bump only for package root
