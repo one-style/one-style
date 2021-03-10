@@ -6,6 +6,9 @@
     "publish": "lerna version --conventional-commits --create-release github"
   },
   "devDependencies": {
+    "@one-style/commit": "^0.1.1",
+    "@one-style/eslint": "^0.1.1",
+    "@one-style/prettier": "^0.1.1",
     "lerna": "^3.22.1"
   },
   "husky": {
