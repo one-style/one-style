@@ -2,7 +2,8 @@ exports.getEslint = ({
     useReact = true,
     useTs = true,
     ignorePatterns = [],
-    rules = {}
+    rules = {},
+    useJest = true,
 } = {
     
 }) => {
@@ -12,7 +13,8 @@ exports.getEslint = ({
         'standard',
         useReact && 'standard-react',
         'plugin:prettier/recommended',
-        useReact && 'react-app' // @todo 拆解
+        useReact && 'react-app',
+        useJest && 'plugin:jest/all'
       ].filter(Boolean),
       parserOptions: {
         ecmaFeatures: { legacyDecorators: true, jsx: true }
@@ -22,7 +24,11 @@ exports.getEslint = ({
         'react/prop-types': 0,
         ...rules
       },
-      ignorePatterns: ['node_modules', ...ignorePatterns]
+      ignorePatterns: ['node_modules', ...ignorePatterns],
+      parser: useTs ? '@typescript-eslint/parser' : 'babel-eslint',
+      env: useJest ? {
+        'jest/globals': true,
+      } : {},
     }
   }
   
