@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/one-style/one-style/compare/v0.2.0...v0.3.0) (2021-05-08)
+
+
+### Features
+
+* **@one-style/commit:** update dependencies ([09d3137](https://github.com/one-style/one-style/commit/09d3137467a0eea48b1a10458d21f1cd4b608b35))
+
+
+
+
+
 # [0.2.0](https://github.com/one-style/one-style/compare/v0.1.1...v0.2.0) (2021-03-10)
 
 
