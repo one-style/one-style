@@ -5,11 +5,22 @@
     "commit": "lint-staged && export HUSKY_SKIP_HOOKS=1 && git-cz",
     "publish": "lerna version --conventional-commits --create-release github"
   },
-  "devDependencies": {
-    "@one-style/commit": "^0.1.1",
-    "@one-style/eslint": "^0.1.1",
-    "@one-style/prettier": "^0.1.1",
-    "lerna": "^3.22.1"
+  "dependencies": {
+    "@one-style/commit": "^0.3.0",
+    "@one-style/eslint": "^0.3.0",
+    "@one-style/prettier": "^0.3.0",
+    "lerna": "^4.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
   },
   "husky": {
     "hooks": {
@@ -20,14 +31,6 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ]
-  },
-  "lint-staged": {
-    "*.{js,jsx,less,md,json,ts,tsx}": [
-      "prettier --write"
-    ],
-    "*.{js,jsx,ts,tsx}": [
-      "eslint"
     ]
   },
   "config": {
